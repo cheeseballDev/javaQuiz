@@ -28,7 +28,7 @@ public class javaQuiz {
         firstQuestion(3);
     }
 
-    public static int firstQuestion(int maxAttempts) {
+    public static int FirstQuestion(int maxAttempts) {
         String ans, ansUpper;
         System.out.println(ARRAY_OF_QUESTIONS[0]);
         System.out.println(ARRAY_OF_CHOICES[0]);
@@ -46,8 +46,8 @@ public class javaQuiz {
                         if(maxAttempts > 0) {
                             return firstQuestion(maxAttempts);
                         } else {
-                            System.out.println("You have used too many attempts. Try again.");
-                            return firstQuestion(3);
+                            System.out.println("Hear. Feel. Think.");
+                            return FirstQuestion(3);
                         }
                 }
     }
@@ -70,13 +70,13 @@ public class javaQuiz {
                         if(maxAttempts > 0) {
                             return SecondQuestion(maxAttempts);
                         } else {
-                            System.out.println("You have used too many attempts. Try again.");
-                            return firstQuestion(3);
+                            System.out.println("Hear. Feel. Think.");
+                            return SecondQuestion(3);
                         }
                 }
     }
     
-    public static int thirdQuestion(int maxAttempts) {
+    public static int ThirdQuestion(int maxAttempts) {
         String ans, ansUpper;
         System.out.println(ARRAY_OF_QUESTIONS[2]);
         System.out.println(ARRAY_OF_CHOICES[2]);
@@ -85,22 +85,22 @@ public class javaQuiz {
         ansUpper = ans.toUpperCase();
                 if (ansUpper.equals("C")) {
                     System.out.println("Answer is correct! Proceeding to the next question.");
-                    fourthQuestion(maxAttempts);
+                    FourthQuestion(maxAttempts);
                     return 0;
                 } else {
                     System.out.println("Answer is incorrect, try again.");
                     maxAttempts -= 1;
                     System.out.println((maxAttempts == 1) ? maxAttempts + " Last attempt!" : maxAttempts + " Attempts remaining!");
                         if(maxAttempts > 0) {
-                            return thirdQuestion(maxAttempts);
+                            return ThirdQuestion(maxAttempts);
                         } else {
-                            System.out.println("You have used too many attempts. Try again.");
-                            return firstQuestion(3);
+                            System.out.println("Hear. Feel. Think.");
+                            return ThirdQuestion(3);
                         }
                 }
     }
 
-    public static int fourthQuestion(int maxAttempts) {
+    public static int FourthQuestion(int maxAttempts) {
         String ans, ansUpper;
         System.out.println(ARRAY_OF_QUESTIONS[3]);
         System.out.println(ARRAY_OF_CHOICES[3]);
@@ -116,15 +116,15 @@ public class javaQuiz {
                     maxAttempts -= 1;
                     System.out.println((maxAttempts == 1) ? maxAttempts + " Last attempt!" : maxAttempts + " Attempts remaining!");
                         if(maxAttempts > 0) {
-                            return fourthQuestion(maxAttempts);
+                            return FourthQuestion(maxAttempts);
                         } else {
-                            System.out.println("You have used too many attempts. Try again.");
-                            return firstQuestion(3);
+                            System.out.println("Hear. Feel. Think.");
+                            return FourthQuestion(3);
                         }
                 }
     }
     
-    public static int fifthQuestion(int maxAttempts) {
+    public static int FifthQuestion(int maxAttempts) {
         String ans, ansUpper;
         System.out.println(ARRAY_OF_QUESTIONS[4]);
         System.out.println(ARRAY_OF_CHOICES[4]);
@@ -132,17 +132,17 @@ public class javaQuiz {
         ansUpper = ans.toUpperCase();
                 if (ansUpper.equals("A")) {
                     System.out.println("Answer is correct!");
-                    System.out.println("Congratulations, you have completed the quiz!");
+                    System.out.println("Congratulations, you have completed the quiz! Your score is 5/5!");
                     return 1;
                 } else {
                     System.out.println("Answer is incorrect, try again.");
                     maxAttempts -= 1;
                     System.out.println((maxAttempts == 1) ? maxAttempts + " Last attempt!" : maxAttempts + " Attempts remaining!");
                         if(maxAttempts > 0) {
-                            return fifthQuestion(maxAttempts);
+                            return FifthQuestion(maxAttempts);
                         } else {
-                            System.out.println("You have used too many attempts. Try again from the start.");
-                            return firstQuestion(3);
+                            System.out.println("Hear. Feel. Think.");
+                            return FifthQuestion(3);
                         }
                 }
     }
